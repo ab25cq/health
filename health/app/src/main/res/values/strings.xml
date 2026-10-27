@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ヘルスコネクト対応万歩計</string>
+    <string name="sync_detail">未同期：%1$d 歩\n最終同期：%2$s\n%3$s\n%4$s</string>
+    <style name="AppTheme" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#007F70</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">#F5F8F7</item>
+    </style>
+</resources>

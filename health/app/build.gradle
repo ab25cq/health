@@ -1,0 +1,11 @@
+plugins { id 'com.android.application' }
+def secrets = new Properties()
+rootProject.file('signing.properties').withInputStream { secrets.load(it) }
+android {
+    namespace 'com.ab25cq.health'
+    compileSdk 36
+    defaultConfig { applicationId 'com.ab25cq.health'; minSdk 34; targetSdk 36; versionCode 1; versionName '1.0' }
+    signingConfigs { release { storeFile rootProject.file('../my-release-key.jks'); storePassword secrets.storePassword; keyAlias secrets.keyAlias; keyPassword secrets.keyPassword } }
+    buildTypes { release { signingConfig signingConfigs.release; minifyEnabled false } }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}
